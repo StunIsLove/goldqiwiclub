@@ -2,9 +2,9 @@
 
 namespace Goldqiwi\Club;
 
-use goldqiwi\core\ClubInterface;
+use Goldqiwi\Core\ClubInterface;
 
-class GoldQiwi implements ClubInterface
+class GoldQiwiClub implements ClubInterface
 {
     protected array $guests = [];
 
@@ -16,12 +16,10 @@ class GoldQiwi implements ClubInterface
         $this->guests[] = $guest;
     }
 
-    public function launch()
+    public function startParty()
     {
         foreach ($this->guests as $guest) {
             print(json_encode($guest, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
         }
     }
-
-
 }
