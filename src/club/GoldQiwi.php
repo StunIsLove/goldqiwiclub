@@ -2,9 +2,9 @@
 
 namespace Goldqiwi\Club;
 
-use goldqiwi\core\Club;
+use goldqiwi\core\ClubInterface;
 
-class GoldQiwi implements Club
+class GoldQiwi implements ClubInterface
 {
     protected array $guests = [];
 

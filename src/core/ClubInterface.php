@@ -2,7 +2,7 @@
 
 namespace Goldqiwi\Core;
 
-interface Club
+interface ClubInterface
 {
     /**
      * Adds a guest
