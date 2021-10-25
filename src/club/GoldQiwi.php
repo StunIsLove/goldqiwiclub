@@ -1,6 +1,6 @@
 <?php
 
-namespace goldqiwi\club;
+namespace Goldqiwi\Club;
 
 use goldqiwi\core\Club;
 

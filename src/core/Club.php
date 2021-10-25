@@ -1,6 +1,6 @@
 <?php
 
-namespace goldqiwi\core;
+namespace Goldqiwi\Core;
 
 interface Club
 {

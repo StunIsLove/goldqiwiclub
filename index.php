@@ -2,11 +2,11 @@
 
 require_once './src/loader.php';
 
-$goldQiwiClub = new goldqiwi\club\GoldQiwi();
+$goldQiwiClub = new Goldqiwi\Club\GoldQiwi();
 
 $goldQiwiClub->addGuest([
     'name' => 'Тест Тестович',
-    'dance' => ['rnb']
+    'dances' => ['rnb', 'pop']
 ]);
 
 $goldQiwiClub->launch();
