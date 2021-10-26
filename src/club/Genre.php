@@ -35,7 +35,7 @@ class Genre implements GenreInterface
         return $this->dances;
     }
 
-    public function getMotion() : array
+    public function getMotion() : string
     {
         return $this->motion;
     }

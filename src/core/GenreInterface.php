@@ -25,7 +25,7 @@ interface GenreInterface
 
     /**
      * Возвращает движения в танце
-     * @return array
+     * @return string
      */
-    public function getMotion() : array;
+    public function getMotion() : string;
 }
