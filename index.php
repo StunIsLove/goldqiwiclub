@@ -17,37 +17,37 @@ $club->addDance(new Dance('electrodance', 'энергично двигает н�
 $club->addDance(new Dance('house', 'плавно двигает руками, ногами и туловищем под ритм'));
 
 // Добавление одного жанра
-$club->addGenre(new Genre('pop', [$club->setDance('pop')]));
+$club->addGenre(new Genre('pop', [$club->getDance('pop')]));
 
 // Добавление нескольких жанров
 $club->addGenres([
-    new Genre('rnb', [$club->setDance('hiphop'), $club->setDance('rnb')]),
-    new Genre('electro', [$club->setDance('house'), $club->setDance('electrodance')])
+    new Genre('rnb', [$club->getDance('hiphop'), $club->getDance('rnb')]),
+    new Genre('electro', [$club->getDance('house'), $club->getDance('electrodance')])
 ]);
 
 $club->addPlaylist([
-    new Song("O-Zone - Dragostea Din Tei", $club->setGenre('electro')),
-    new Song("Coolio - Gangsta's Paradise", $club->setGenre('rnb')),
-    new Song("ABBA - Gimme! Gimme! Gimme!", $club->setGenre('pop')),
-    new Song("Eiffel 65 - Blue", $club->setGenre('electro')),
-    new Song("Dr. Dre ft. Snoop Dogg - Still D.R.E.", $club->setGenre('rnb')),
-    new Song("Boney M. - Rasputin", $club->setGenre('pop')),
-    new Song('Scatman John - Scatman', $club->setGenre('electro')),
-    new Song("Warren G - Regulate", $club->setGenre('rnb')),
-    new Song("Rick Astley - Never Gonna Give You Up", $club->setGenre('pop')),
-    new Song("Bomfunk MC's - Freestyler", $club->setGenre('electro'))
+    new Song("O-Zone - Dragostea Din Tei", $club->getGenre('electro')),
+    new Song("Coolio - Gangsta's Paradise", $club->getGenre('rnb')),
+    new Song("ABBA - Gimme! Gimme! Gimme!", $club->getGenre('pop')),
+    new Song("Eiffel 65 - Blue", $club->getGenre('electro')),
+    new Song("Dr. Dre ft. Snoop Dogg - Still D.R.E.", $club->getGenre('rnb')),
+    new Song("Boney M. - Rasputin", $club->getGenre('pop')),
+    new Song('Scatman John - Scatman', $club->getGenre('electro')),
+    new Song("Warren G - Regulate", $club->getGenre('rnb')),
+    new Song("Rick Astley - Never Gonna Give You Up", $club->getGenre('pop')),
+    new Song("Bomfunk MC's - Freestyler", $club->getGenre('electro'))
 ]);
 
 // Добавление одного гостя
-$club->addGuest(new Guest('Робин Гудович', [$club->setDance('rnb'), $club->setDance('pop')]));
+$club->addGuest(new Guest('Робин Гудович', [$club->getDance('rnb'), $club->getDance('pop')]));
 
 // Добавление нескольких гостей
 $club->addGuests([
-    new Guest('Стивен Спилбергович', [$club->setDance('electrodance')]),
-    new Guest('Газман Олегович', [$club->setDance('house'), $club->setDance('electrodance')]),
-    new Guest('Ривз Кианович', [$club->setDance('hiphop')]),
-    new Guest('Моника Везуччи', [$club->setDance('electrodance'), $club->setDance('hiphop')]),
-    new Guest('Алла Попугачева', [$club->setDance('rnb')])
+    new Guest('Стивен Спилбергович', [$club->getDance('electrodance')]),
+    new Guest('Газман Олегович', [$club->getDance('house'), $club->getDance('electrodance')]),
+    new Guest('Ривз Кианович', [$club->getDance('hiphop')]),
+    new Guest('Моника Везуччи', [$club->getDance('electrodance'), $club->getDance('hiphop')]),
+    new Guest('Алла Попугачева', [$club->getDance('rnb')])
 ]);
 
 $club->startParty();

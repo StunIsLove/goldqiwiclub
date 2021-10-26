@@ -21,7 +21,7 @@ interface ClubInterface
      * @param string $name имя жанра
      * @return GenreInterface
      */
-    public function setGenre(string $name);
+    public function getGenre(string $name);
 
     /**
      * @param array $songs
@@ -39,7 +39,7 @@ interface ClubInterface
      * @param string $name имя танца
      * @return DanceInterface
      */
-    public function setDance(string $name): DanceInterface;
+    public function getDance(string $name): DanceInterface;
 
     /**
      * Запускает вечеринку в клубе

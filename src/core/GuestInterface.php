@@ -21,4 +21,10 @@ interface GuestInterface
      * @return array
      */
     public function getDances() : array;
+
+    /**
+     * @param SongInterface $song
+     * @return string
+     */
+    public function actionToMusic(SongInterface $song) : string;
 }
