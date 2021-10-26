@@ -70,6 +70,26 @@ class Club implements ClubInterface
 
     public function startParty()
     {
-        // TODO: Логика вечеринки
+        print("Начинаем вечеринку!" . PHP_EOL);
+
+        foreach ($this->playlist as $song) {
+            print("Сейчас играет: {$song->getName()}, жанр: {$song->getGenre()->getName()}" . PHP_EOL);
+            print('==================================================' . PHP_EOL);
+
+            foreach ($this->guests as $key => $guest) {
+                $guest->action = "{$key}. {$guest->getName()} репетирует танцевать с рюмкой в баре" . PHP_EOL;
+
+                foreach ($guest->getDances() as $dance) {
+                    if ($dance == $song->getGenre()) {
+                        $guest->action = "{$key}. {$guest->getName()} {$dance->getMotion()}" . PHP_EOL;
+                        break;
+                    }
+                }
+
+                print($guest->action);
+            }
+
+            print('==================================================' . PHP_EOL);
+        }
     }
 }
