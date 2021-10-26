@@ -3,5 +3,8 @@
     "psr-4": {
       "Goldqiwi\\": "src/"
     }
+  },
+  "require": {
+    "php": "^7.4|^8.0"
   }
 }
