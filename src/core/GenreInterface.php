@@ -7,9 +7,8 @@ interface GenreInterface
     /**
      * @param string $name
      * @param array $dances
-     * @param string $motion
      */
-    public function __construct(string $name, array $dances, string $motion);
+    public function __construct(string $name, array $dances);
 
     /**
      * Возвращает название жанра
@@ -24,8 +23,9 @@ interface GenreInterface
     public function getDances() : array;
 
     /**
-     * Возвращает движения в танце
-     * @return string
+     * Возвращает танец по имени
+     * @param string $name
+     * @return mixed
      */
-    public function getMotion() : string;
+    public function getDance(string $name);
 }

@@ -2,6 +2,7 @@
 
 namespace Goldqiwi\Club;
 
+use Goldqiwi\Core\DanceInterface;
 use Goldqiwi\Core\GenreInterface;
 
 class Genre implements GenreInterface
@@ -10,19 +11,19 @@ class Genre implements GenreInterface
 
     protected array $dances = [];
 
-    protected string $motion;
-
     /**
      * Dance constructor.
      * @param string $name
      * @param array $dances
-     * @param string $motion
      */
-    public function __construct(string $name, array $dances, string $motion)
+    public function __construct(string $name, array $dances)
     {
         $this->name = $name;
-        $this->dances = $dances;
-        $this->motion = $motion;
+
+        foreach ($dances as $dance) {
+            $this->dances[$dance->getName()] = $dance;
+        }
+
     }
 
     public function getName() : string
@@ -35,8 +36,8 @@ class Genre implements GenreInterface
         return $this->dances;
     }
 
-    public function getMotion() : string
+    public function getDance(string $name)
     {
-        return $this->motion;
+        return $this->dances[$name];
     }
 }
