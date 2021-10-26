@@ -97,7 +97,9 @@ class Club implements ClubInterface
 
     public function startParty()
     {
-        print("Начинаем вечеринку!" . PHP_EOL);
+        print("*********************" . PHP_EOL);
+        print("*Начинаем вечеринку!*" . PHP_EOL);
+        print("*********************" . PHP_EOL);
 
         foreach ($this->playlist as $song) {
             print("Сейчас играет: {$song->getName()}, жанр: {$song->getGenre()->getName()}" . PHP_EOL);

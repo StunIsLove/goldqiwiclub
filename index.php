@@ -47,7 +47,7 @@ $club->addGuests([
     new Guest('Газман Олегович', [$club->getDance('house'), $club->getDance('electrodance')]),
     new Guest('Ривз Кианович', [$club->getDance('hiphop')]),
     new Guest('Моника Везуччи', [$club->getDance('electrodance'), $club->getDance('hiphop')]),
-    new Guest('Алла Попугачева', [$club->getDance('rnb')])
+    new Guest('Алла Попугачева', [$club->getDance('rnb'), $club->getDance('pop')])
 ]);
 
 $club->startParty();
