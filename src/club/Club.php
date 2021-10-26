@@ -63,7 +63,7 @@ class Club implements ClubInterface
      * @param string $name
      * @return GenreInterface
      */
-    public function setGenre(string $name): GenreInterface
+    public function getGenre(string $name): GenreInterface
     {
         return $this->genres[$name];
     }
@@ -90,7 +90,7 @@ class Club implements ClubInterface
      * @param string $name
      * @return DanceInterface
      */
-    public function setDance(string $name) : DanceInterface
+    public function getDance(string $name) : DanceInterface
     {
         return $this->dances[$name];
     }
@@ -103,17 +103,8 @@ class Club implements ClubInterface
             print("Сейчас играет: {$song->getName()}, жанр: {$song->getGenre()->getName()}" . PHP_EOL);
             print('==================================================' . PHP_EOL);
 
-            foreach ($this->guests as $key => $guest) {
-                $guest->action = "{$key}. {$guest->getName()} репетирует танцевать с рюмкой в баре" . PHP_EOL;
-
-                foreach ($guest->getDances() as $dance) {
-                    if ($song->getGenre()->getDance($dance->getName())) {
-                        $guest->action = "{$key}. {$guest->getName()} {$dance->getMotion()}" . PHP_EOL;
-                        break;
-                    }
-                }
-
-                print($guest->action);
+            foreach ($this->guests as $guest) {
+                print($guest->actionToMusic($song));
             }
 
             print('==================================================' . PHP_EOL);
