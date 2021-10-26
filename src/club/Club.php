@@ -5,10 +5,13 @@ namespace Goldqiwi\Club;
 use Goldqiwi\Core\ClubInterface;
 use Goldqiwi\Core\GenreInterface;
 use Goldqiwi\Core\GuestInterface;
+use Goldqiwi\Core\DanceInterface;
 
 class Club implements ClubInterface
 {
     protected array $guests = [];
+
+    protected array $dances = [];
 
     protected array $genres = [];
 
@@ -56,16 +59,40 @@ class Club implements ClubInterface
         }
     }
 
-    public function setGenre(string $name)
+    /**
+     * @param string $name
+     * @return GenreInterface
+     */
+    public function setGenre(string $name): GenreInterface
     {
         return $this->genres[$name];
     }
 
+    /**
+     * @param array $songs
+     */
     public function addPlaylist(array $songs)
     {
         foreach ($songs as $song) {
             $this->playlist[] = $song;
         }
+    }
+
+    /**
+     * @param DanceInterface $dance
+     */
+    public function addDance(DanceInterface $dance)
+    {
+        $this->dances[$dance->getName()] = $dance;
+    }
+
+    /**
+     * @param string $name
+     * @return DanceInterface
+     */
+    public function setDance(string $name) : DanceInterface
+    {
+        return $this->dances[$name];
     }
 
     public function startParty()
@@ -80,7 +107,7 @@ class Club implements ClubInterface
                 $guest->action = "{$key}. {$guest->getName()} репетирует танцевать с рюмкой в баре" . PHP_EOL;
 
                 foreach ($guest->getDances() as $dance) {
-                    if ($dance == $song->getGenre()) {
+                    if ($song->getGenre()->getDance($dance->getName())) {
                         $guest->action = "{$key}. {$guest->getName()} {$dance->getMotion()}" . PHP_EOL;
                         break;
                     }
