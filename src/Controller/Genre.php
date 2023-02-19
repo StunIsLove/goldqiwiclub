@@ -1,9 +1,8 @@
 <?php
 
-namespace Goldqiwi\Club;
+namespace Goldqiwi\Controller;
 
-use Goldqiwi\Core\DanceInterface;
-use Goldqiwi\Core\GenreInterface;
+use Goldqiwi\Contract\GenreInterface;
 
 class Genre implements GenreInterface
 {

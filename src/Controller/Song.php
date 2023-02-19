@@ -1,9 +1,9 @@
 <?php
 
-namespace Goldqiwi\Club;
+namespace Goldqiwi\Controller;
 
-use Goldqiwi\Core\SongInterface;
-use Goldqiwi\Core\GenreInterface;
+use Goldqiwi\Contract\SongInterface;
+use Goldqiwi\Contract\GenreInterface;
 
 class Song implements SongInterface
 {

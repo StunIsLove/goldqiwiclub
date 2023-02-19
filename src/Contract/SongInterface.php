@@ -1,6 +1,6 @@
 <?php
 
-namespace Goldqiwi\Core;
+namespace Goldqiwi\Contract;
 
 interface SongInterface
 {

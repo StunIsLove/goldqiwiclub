@@ -1,11 +1,11 @@
 <?php
 
-namespace Goldqiwi\Club;
+namespace Goldqiwi\Controller;
 
-use Goldqiwi\Core\ClubInterface;
-use Goldqiwi\Core\GenreInterface;
-use Goldqiwi\Core\GuestInterface;
-use Goldqiwi\Core\DanceInterface;
+use Goldqiwi\Contract\ClubInterface;
+use Goldqiwi\Contract\GenreInterface;
+use Goldqiwi\Contract\GuestInterface;
+use Goldqiwi\Contract\DanceInterface;
 
 class Club implements ClubInterface
 {
