@@ -1,8 +1,8 @@
 <?php
 
-namespace Goldqiwi\Core;
+namespace Goldqiwi\Contract;
 
-interface GenreInterface
+interface GuestInterface
 {
     /**
      * @param string $name
@@ -11,21 +11,20 @@ interface GenreInterface
     public function __construct(string $name, array $dances);
 
     /**
-     * Возвращает название жанра
+     * Возвращает имя гостя
      * @return string
      */
     public function getName() : string;
 
     /**
-     * Возвращает подходящие танцы
+     * Возвращает доступные танцы
      * @return array
      */
     public function getDances() : array;
 
     /**
-     * Возвращает танец по имени
-     * @param string $name
-     * @return mixed
+     * @param SongInterface $song
+     * @return string
      */
-    public function getDance(string $name);
+    public function actionToMusic(SongInterface $song) : string;
 }

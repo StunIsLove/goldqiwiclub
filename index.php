@@ -2,11 +2,11 @@
 
 require_once './vendor/autoload.php';
 
-use Goldqiwi\Club\Club;
-use Goldqiwi\Club\Dance;
-use Goldqiwi\Club\Genre;
-use Goldqiwi\Club\Guest;
-use Goldqiwi\Club\Song;
+use Goldqiwi\Controller\Club;
+use Goldqiwi\Controller\Dance;
+use Goldqiwi\Controller\Genre;
+use Goldqiwi\Controller\Guest;
+use Goldqiwi\Controller\Song;
 
 $club = new Club();
 

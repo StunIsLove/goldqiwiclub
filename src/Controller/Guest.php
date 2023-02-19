@@ -1,9 +1,9 @@
 <?php
 
-namespace Goldqiwi\Club;
+namespace Goldqiwi\Controller;
 
-use Goldqiwi\Core\GuestInterface;
-use Goldqiwi\Core\SongInterface;
+use Goldqiwi\Contract\GuestInterface;
+use Goldqiwi\Contract\SongInterface;
 
 class Guest implements GuestInterface
 {

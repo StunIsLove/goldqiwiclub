@@ -1,8 +1,8 @@
 <?php
 
-namespace Goldqiwi\Club;
+namespace Goldqiwi\Controller;
 
-use Goldqiwi\Core\DanceInterface;
+use Goldqiwi\Contract\DanceInterface;
 
 class Dance implements DanceInterface
 {
